@@ -4,6 +4,7 @@ internal static class ModManager
     // Follows https://musedash.fandom.com/wiki/Songs order
     public static readonly Dictionary<string, string> RomajiNames = new()
     {
+        // Default Songs Pack
         ["0-4"] = "Danxiang Ditie Feat.karin",
         ["0-6"] = "Shiguang Tuya",
         ["0-7"] = "Haitun Yu Guangbo feat.Uranyan",
