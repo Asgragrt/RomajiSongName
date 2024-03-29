@@ -23,8 +23,7 @@ internal static class FancyScrollPatch
 
             var musicInfo = GlobalDataBase.dbMusicTag.GetMusicInfoFromShowMusicUids(i);
             musicInfo?.GetLocal(Language.english);
-
-            __instance.musicFancyScrollView.onItemIndexChange.Invoke(GlobalDataBase.dbMusicTag.curSelectedMusicIdx);
+            __instance.musicFancyScrollView.onItemIndexChange?.Invoke(i);
         });
     }
 }
