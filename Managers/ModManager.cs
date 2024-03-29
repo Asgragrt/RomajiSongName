@@ -137,6 +137,11 @@ internal static class ModManager
         // ~~ Search doesnt work ~~
         ["71-4"] = "Qiangwei Lianxin feat.AKA", // Qiangwei no koigokoro
 
+        // Legends of Muse Warriors
+        ["72-0"] = "P E R O P E R O Ani\u2730ki\u2730ran\u2730bu (feat.音游部, howsoon)",
+        ["72-2"] = "How To Make Otoge\uff5eKyoku!",
+        ["72-6"] = "Teshikani( TESHiKANi )",
+
         // MD Plus Project
         ["43-3"] = "Night・of・Knights",
         ["43-10"] = "Catalyst",
