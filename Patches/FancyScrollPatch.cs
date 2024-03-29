@@ -14,7 +14,7 @@ internal static class FancyScrollPatch
     internal static void Postfix(PnlStage __instance)
     {
         if (!SettingsManager.IsEnabled) return;
-        
+
         _lastIndex = -1;
         __instance.musicFancyScrollView.onItemIndexChange += new Action<int>(i =>
         {

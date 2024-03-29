@@ -1,4 +1,5 @@
 ﻿namespace RomajiSongName.Managers;
+
 internal static class ModManager
 {
     // Follows https://musedash.fandom.com/wiki/Songs order
