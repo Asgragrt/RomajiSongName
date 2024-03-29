@@ -21,7 +21,10 @@ internal static class FancyScrollPatch
             if (_lastIndex == i) return;
             _lastIndex = i;
 
-            var musicInfo = GlobalDataBase.dbMusicTag.GetMusicInfoFromShowMusicUids(i);
+            var dbMusicTag = GlobalDataBase.dbMusicTag;
+            if (_lastIndex == dbMusicTag.stageShowMusicCount - 1) return;
+
+            var musicInfo = dbMusicTag.GetMusicInfoFromShowMusicUids(i);
             musicInfo?.GetLocal(Language.english);
             __instance.musicFancyScrollView.onItemIndexChange?.Invoke(i);
         });
