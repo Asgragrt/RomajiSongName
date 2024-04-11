@@ -18,4 +18,4 @@
 2. Move `RomajiSongName.dll` to `${Your muse dash folder}/Mods`.
 3. Enable / Disable the mod from the configuration file found at `${Your muse dash folder}/UserData/RomajiSongName.cfg`.
 
-## Check out my other [mods](https://github.com/Asgragrt#musedash-modding)
+##  ❗Check out my other [mods](https://github.com/Asgragrt#musedash-modding)❗
