@@ -1,7 +1,6 @@
 using HarmonyLib;
 using Il2CppAssets.Scripts.Database;
 using Il2CppAssets.Scripts.UI.Panels;
-using Il2CppPeroPeroGames.GlobalDefines;
 using RomajiSongName.Managers;
 
 namespace RomajiSongName.Patches;
@@ -16,6 +15,7 @@ internal static class FancyScrollPatch
         if (!SettingsManager.IsEnabled) return;
 
         _lastIndex = -1;
+
         __instance.musicFancyScrollView.onItemIndexChange += new Action<int>(i =>
         {
             if (_lastIndex == i) return;
@@ -25,7 +25,7 @@ internal static class FancyScrollPatch
             if (_lastIndex == dbMusicTag.stageShowMusicCount - 1) return;
 
             var musicInfo = dbMusicTag.GetMusicInfoFromShowMusicUids(i);
-            musicInfo?.GetLocal(Language.LanguageToIndex(DataHelper.userLanguage));
+            musicInfo?.GetLocal(GlobalDataBase.s_DbUi.curLanguageIndex);
             __instance.musicFancyScrollView.onItemIndexChange?.Invoke(i);
         });
     }
