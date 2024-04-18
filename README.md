@@ -4,7 +4,7 @@
 
 ~~shouldve called it romanSongName~~
 
-* To use the search function, don't use spaces :D
+* To use the search function, don't use spaces for the romanized titles :D, it works normally for the other charts.
 * The artists names weren't romanized.
 * ***If u wan't to make improvements to the romanization, PR's or private messages are welcomed :D***.
 
