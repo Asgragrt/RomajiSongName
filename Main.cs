@@ -10,4 +10,9 @@ public class Main : MelonMod
         SettingsManager.Load();
         LoggerInstance.Msg("RomajiSongName has loaded correctly!");
     }
+
+    public override void OnLateInitializeMelon()
+    {
+        ModManager.AddSearchTags();
+    }
 }

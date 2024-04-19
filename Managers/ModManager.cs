@@ -1,4 +1,10 @@
-﻿namespace RomajiSongName.Managers;
+﻿using System.Text.RegularExpressions;
+using Il2CppAssets.Scripts.Database;
+using Il2CppAssets.Scripts.PeroTools.Commons;
+using Il2CppAssets.Scripts.PeroTools.Managers;
+using Il2CppInterop.Runtime.InteropTypes.Arrays;
+
+namespace RomajiSongName.Managers;
 
 internal static class ModManager
 {
@@ -120,11 +126,10 @@ internal static class ModManager
         ["66-7"] = "Future・Eve",
         ["66-9"] = "Shunran",
 
-        // Touhou Mugakudan -III-
+        // Touhou Mugakudan -II I-
         ["69-5"] = "Tsurupettan",
 
         // Rin·Len's Mirrorland
-        // ~~ Search doesnt work ~~
         ["70-0"] = "Rettou Joutou",
         ["70-1"] = "Telecaster b boy",
         ["70-2"] = "I\uff5eya i\uff5eya i\uff5eya",
@@ -134,7 +139,6 @@ internal static class ModManager
         ["70-7"] = "Dance Robot Dance",
 
         // Valentine Stage
-        // ~~ Search doesnt work ~~
         ["71-4"] = "Qiangwei Lianxin feat.AKA", // Qiangwei no koigokoro
 
         // Legends of Muse Warriors
@@ -151,4 +155,46 @@ internal static class ModManager
         ["43-36"] = "Mermaid Radio",
         ["43-44"] = "Muse Xiaoshi"
     };
+
+    internal static void AddSearchTags()
+    {
+        var config = Singleton<ConfigManager>.instance.GetConfigObject<DBConfigMusicSearchTag>();
+
+        foreach (var (key, value) in RomajiNames)
+        {
+            var splitString = SplitString(value);
+            var joinedSpacedString = string.Join(' ', splitString);
+            var joinedTightString = string.Join(null, splitString);
+
+            List<string> tags = [value, joinedSpacedString, joinedTightString];
+            tags.AddRange(splitString);
+
+            if (config.m_Dictionary.TryGetValue(key, out var tagInfo))
+            {
+                var oldTags = new List<string>(tagInfo.tag);
+                oldTags.AddRange(tags);
+                tagInfo.tag = new Il2CppStringArray(oldTags.ToArray());
+            }
+            else
+            {
+                var searchTag = new MusicSearchTagInfo
+                {
+                    uid = key,
+                    listIndex = config.count,
+                    tag = new Il2CppStringArray(tags.ToArray())
+                };
+
+                config.m_Dictionary.Add(searchTag.uid, searchTag);
+                config.list.Add(searchTag);
+            }
+        }
+    }
+
+    private static List<string> SplitString(string s)
+    {
+        return Regex.Split(s.Trim(), @"[^a-zA-Z0-9]")
+            .Select(word => word.Trim('\'').ToLower())
+            .Where(word => word.Any())
+            .ToList();
+    }
 }
