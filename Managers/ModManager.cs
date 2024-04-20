@@ -110,16 +110,16 @@ internal static class ModManager
 
         // Muse Radio FM104
         ["63-1"] = "Streamers High of 100 years",
-        ["63-4"] = "Yoru no Maji", // ik its "machi" but ppg :D
+        ["63-4"] = "Yoru no Machi",
 
         // COSMIC RADIO PEROLIST
         ["64-0"] = "Sutori\uff5ema\uff5eFIRE!?!?",
-        ["64-4"] = "Kawaiku Kareini Utyuukaitou", // Uchuu but ppg :D
+        ["64-4"] = "Kawaiku Kareini Uchuukaitou",
 
         // Miku in Museland
         ["66-0"] = "39 Music！",
         ["66-2"] = "Cynical Night Plan",
-        ["66-3"] = "Kami poi na", // Kamippoina
+        ["66-3"] = "Kamippoina", // Kamippoina
         ["66-4"] = "Darling Dance",
         ["66-5"] = "Hatsune Tenchi Kaibyaku Shinwa",
         ["66-6"] = "Vampire",
@@ -192,6 +192,7 @@ internal static class ModManager
 
     private static List<string> SplitString(string s)
     {
+        // Split string by non alphanumerical characters, sanitize from empty or space only strings and return a list
         return Regex.Split(s.Trim(), @"[^a-zA-Z0-9]")
             .Select(word => word.Trim('\'').ToLower())
             .Where(word => word.Any())
