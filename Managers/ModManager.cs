@@ -12,26 +12,26 @@ internal static class ModManager
     public static readonly Dictionary<string, string> RomajiNames = new()
     {
         // Default Songs Pack
-        ["0-4"] = "Danxiang Ditie Feat.karin",
-        ["0-6"] = "Shiguang Tuya",
-        ["0-7"] = "Haitun Yu Guangbo feat.Uranyan",
-        ["0-31"] = "Tangguose Lianaixue",
-        ["0-10"] = "Lianai Yuyin Daohang feat.yousa",
+        ["0-4"] = "Dan Xiang Di Tie Feat.karin",
+        ["0-6"] = "Shi Guang Tu Ya",
+        ["0-7"] = "Hai Tun Yu Guang Bo feat.Uranyan",
+        ["0-31"] = "Tang Guo Se Lian Ai Xue",
+        ["0-10"] = "Lian Ai Yu Yin Dao Hang feat.yousa",
         ["0-42"] = "Shinsekai Yori",
         ["0-35"] = "Tu Hua",
 
         // Cute Is Everything Vol.2
-        ["13-0"] = "Surong Nihong feat.kumako",
-        ["13-1"] = "Xiangqiu Shang de Zhuisu shi",
-        ["13-2"] = "Woyao mai mai mai",
-        ["13-3"] = "Yuehui Xuanyan",
-        ["13-4"] = "Chuxue",
-        ["13-5"] = "Xianshang Huahai",
+        ["13-0"] = "Su Rong Ni Hong feat.kumako",
+        ["13-1"] = "Xing Qiu Shang De Zhui Su Shi",
+        ["13-2"] = "Wo Yao Mai Mai Mai",
+        ["13-3"] = "Yue Hui Xuan Yan",
+        ["13-4"] = "Chu Xue",
+        ["13-5"] = "Xian Shang Hua Hai",
 
         // Cute Is Everything Vol.3
-        ["15-0"] = "Mozhou feat.早木旋子",
-        ["15-1"] = "Banlanxing Caihui Lvxingshi",
-        ["15-4"] = "Shenger Weiren Wohen Baoqian",
+        ["15-0"] = "Mo Zhou feat.早木旋子",
+        ["15-1"] = "Ban Lan Xing Cai Hui Lv Xing Shi",
+        ["15-4"] = "Sheng Er Wei Ren Wo Hen Bao Qian",
 
         // Cute Is Everything Vol.4
         ["18-1"] = "Shenlan Yu Ye de Huxi",
