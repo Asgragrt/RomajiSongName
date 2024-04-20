@@ -12,78 +12,90 @@ internal static class ModManager
     public static readonly Dictionary<string, string> RomajiNames = new()
     {
         // Default Songs Pack
-        ["0-4"] = "Danxiang Ditie Feat.karin",
-        ["0-6"] = "Shiguang Tuya",
-        ["0-7"] = "Haitun Yu Guangbo feat.Uranyan",
-        ["0-31"] = "Tangguose Lianaixue",
-        ["0-10"] = "Lianai Yuyin Daohang feat.yousa",
+        ["0-4"] = "Dan Xiang Di Tie Feat.karin",
+        ["0-6"] = "Shi Guang Tu Ya",
+        ["0-7"] = "Hai Tun Yu Guang Bo feat.Uranyan",
+        ["0-31"] = "Tang Guo Se Lian Ai Xue",
+        ["0-10"] = "Lian Ai Yu Yin Dao Hang feat.yousa",
         ["0-42"] = "Shinsekai Yori",
         ["0-35"] = "Tu Hua",
 
         // Cute Is Everything Vol.2
-        ["13-0"] = "Surong Nihong feat.kumako",
-        ["13-1"] = "Xiangqiu Shang de Zhuisu shi",
-        ["13-2"] = "Woyao mai mai mai",
-        ["13-3"] = "Yuehui Xuanyan",
-        ["13-4"] = "Chuxue",
-        ["13-5"] = "Xianshang Huahai",
+        ["13-0"] = "Su Rong Ni Hong feat.kumako",
+        ["13-1"] = "Xing Qiu Shang De Zhui Su Shi",
+        ["13-2"] = "Wo Yao Mai Mai Mai",
+        ["13-3"] = "Yue Hui Xuan Yan",
+        ["13-4"] = "Chu Xue",
+        ["13-5"] = "Xian Shang Hua Hai",
 
         // Cute Is Everything Vol.3
-        ["15-0"] = "Mozhou feat.早木旋子",
-        ["15-1"] = "Banlanxing Caihui Lvxingshi",
-        ["15-4"] = "Shenger Weiren Wohen Baoqian",
+        ["15-0"] = "Mo Zhou feat.早木旋子",
+        ["15-1"] = "Ban Lan Xing Cai Hui Lv Xing Shi",
+        ["15-4"] = "Sheng Er Wei Ren Wo Hen Bao Qian",
 
         // Cute Is Everything Vol.4
-        ["18-1"] = "Shenlan Yu Ye de Huxi",
-        ["18-4"] = "Jiushi bu Tianghua",
+        ["18-1"] = "Shen Lan Yu Ye De Hu xi",
+        ["18-4"] = "Jiu Shi Bu Ting Hua",
 
         // Cute Is Everything Vol.5
-        ["23-0"] = "Yuhou Tiandian",
-        ["23-1"] = "Gaobai Yingyuan Fangchengshi",
+        ["23-0"] = "Yu Hou Tian Dian",
+        ["23-1"] = "Gao Bai Ying Yuan Fang Cheng Shi",
+        
+        // Cute Is Everything Vol.6
+        ["30-5"] = "Jiao Dian feat.早木旋子",
 
+        // Cute Is Everything Vol.7
+        ["37-0"] = "Liu Li Se Qian Zou Qu",
+        
         // Muse Radio FM101
         ["25-5"] = "Kimi to pool disco",
+        
+        // Muse Radio FM102
+        ["39-0"] = "Qu Jian Hai De Ri Zi",
+        ["39-6"] = "Hadaka no Summer",
 
-        // Happy Otaku Pack Vol.10
-        ["28-5"] = "NiNi-nini-",
+        // Muse Radio FM103
+        ["52-2"] = "Ornament janai(Muse Dash Mix)",
+        
+        // Muse Radio FM104
+        ["63-1"] = "Streamers High of 100 years",
+        ["63-4"] = "Yoru no Machi",
 
         // Let's GROOVE!
         ["29-3"] = "HG Makaizou Polyvinyl Shounen",
         ["29-4"] = "Seija no Ibuki",
-
-        // Cute Is Everything Vol.6
-        ["30-5"] = "Jiaodian feat.早木旋子",
-
+        
+        // Happy Otaku Pack Vol.10
+        ["28-5"] = "NiNi-nini-",
+        
         // Happy Otaku Pack SP
         ["35-0"] = "MuseDash wo Tsukutte Iru PeroPeroGames-san ga Tousan shi chatta yo\uff5e",
         ["35-2"] = "Boku no Hefeng Bendang Shangshou",
-
-        // Cute Is Everything Vol.7
-        ["37-0"] = "Liuli Se Qianzou Qu",
-
+        
+        // Happy Otaku Pack 13
+        ["44-1"] = "Ying Ying Da Zuo Zhan",
+        
+        // Happy Otaku Pack Vol.16
+        ["57-3"] = "Sore wa mo Lovechu",
+        
+        // Happy Otaku Pack Vol.17
+        ["62-0"] = "【Dongai li Lovely】Lovely",
+        ["62-1"] = "Shinkai no Fune",
+        ["62-3"] = "Numatta！！",
+        
         // Phigros
         ["38-1"] = "Yukifuri Merry Christmas",
-
-        // Muse Radio FM102
-        ["39-0"] = "Qu Jianhai de Rizi",
-        ["39-6"] = "Hadaka no Summer",
 
         // Touhou Mugakudan -I-
         ["42-1"] = "Iro wa Nioedo Chirinuru wo",
         ["42-3"] = "Hiiro Gekka Kyoushou no Zetsu",
 
-        // Happy Otaku Pack SP
-        ["44-1"] = "Yingying Dazuouzhan",
-
         // DokiDoki! Valentine!
         ["49-1"] = "Ren'ai Kaihi Izonshi",
 
         // Virtual Idol Production
-        ["51-0"] = "Jiamian Riji",
+        ["51-0"] = "Jia Mian Ri Ji",
         ["51-4"] = "Danshi in\u2606 virtual land",
-
-        // Muse Radio FM103
-        ["52-2"] = "Ornament janai(Muse Dash Mix)",
 
         // MEGAREX THE FUTURE
         ["54-2"] = "Kongetsu no Osusume Playlist wo Kensakushimasu",
@@ -93,24 +105,12 @@ internal static class ModManager
         ["55-2"] = "Monosugoi Space Shuttle de Koishi ga Monosugoi Uta",
         ["55-3"] = "Kakoi Naki yo wa Ikki no Tsukikage",
 
-        // Happy Otaku Pack Vol.16
-        ["57-3"] = "Sore wa mo Lovechu",
-
         // Nanahira Paradise
         ["58-3"] = "Vocal ni Mucha Sasenna",
 
         // Ola Dash
         ["61-0"] = "MuseDash ga Nanika Chotto Okashi", // ??????????
         ["61-2"] = "Buttoba Supernova",
-
-        // Happy Otaku Pack Vol.17
-        ["62-0"] = "【Dongai li Lovely】Lovely",
-        ["62-1"] = "Shinkai no Fune",
-        ["62-3"] = "Numatta！！",
-
-        // Muse Radio FM104
-        ["63-1"] = "Streamers High of 100 years",
-        ["63-4"] = "Yoru no Machi",
 
         // COSMIC RADIO PEROLIST
         ["64-0"] = "Sutori\uff5ema\uff5eFIRE!?!?",
@@ -142,7 +142,7 @@ internal static class ModManager
         ["71-4"] = "Qiangwei Lianxin feat.AKA", // Qiangwei no koigokoro
 
         // Legends of Muse Warriors
-        ["72-0"] = "P E R O P E R O Ani\u2730ki\u2730ran\u2730bu (feat.音游部, howsoon)",
+        ["72-0"] = "P E R O P E R O Xiong\u2730Gui\u2730Luan\u2730Wu (feat.音游部, howsoon)",
         ["72-2"] = "How To Make Otoge\uff5eKyoku!",
         ["72-6"] = "Teshikani( TESHiKANi )",
 
@@ -151,9 +151,9 @@ internal static class ModManager
         ["43-10"] = "Catalyst",
         ["43-18"] = "Monosugoi Kuruttoru Fran-chan ga Monosugoi Uta",
         ["43-24"] = "Tian Ling Ling Di Ling Ling",
-        ["43-29"] = "Jiumeng",
+        ["43-29"] = "Jiu Meng",
         ["43-36"] = "Mermaid Radio",
-        ["43-44"] = "Muse Xiaoshi"
+        ["43-44"] = "Mu Se Xiao Shi"
     };
 
     internal static void AddSearchTags()
