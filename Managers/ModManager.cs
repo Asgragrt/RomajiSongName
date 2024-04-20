@@ -8,7 +8,7 @@ namespace RomajiSongName.Managers;
 
 internal static class ModManager
 {
-    // Follows https://musedash.fandom.com/wiki/Songs order
+    // Sorted by album uid
     public static readonly Dictionary<string, string> RomajiNames = new()
     {
         // Default Songs Pack
@@ -40,55 +40,49 @@ internal static class ModManager
         // Cute Is Everything Vol.5
         ["23-0"] = "Yu Hou Tian Dian",
         ["23-1"] = "Gao Bai Ying Yuan Fang Cheng Shi",
-        
-        // Cute Is Everything Vol.6
-        ["30-5"] = "Jiao Dian feat.早木旋子",
 
-        // Cute Is Everything Vol.7
-        ["37-0"] = "Liu Li Se Qian Zou Qu",
-        
         // Muse Radio FM101
         ["25-5"] = "Kimi to pool disco",
-        
-        // Muse Radio FM102
-        ["39-0"] = "Qu Jian Hai De Ri Zi",
-        ["39-6"] = "Hadaka no Summer",
 
-        // Muse Radio FM103
-        ["52-2"] = "Ornament janai(Muse Dash Mix)",
-        
-        // Muse Radio FM104
-        ["63-1"] = "Streamers High of 100 years",
-        ["63-4"] = "Yoru no Machi",
+        // Happy Otaku Pack Vol.10
+        ["28-5"] = "NiNi-nini-",
 
         // Let's GROOVE!
         ["29-3"] = "HG Makaizou Polyvinyl Shounen",
         ["29-4"] = "Seija no Ibuki",
-        
-        // Happy Otaku Pack Vol.10
-        ["28-5"] = "NiNi-nini-",
-        
+
+        // Cute Is Everything Vol.6
+        ["30-5"] = "Jiao Dian feat.早木旋子",
+
         // Happy Otaku Pack SP
         ["35-0"] = "MuseDash wo Tsukutte Iru PeroPeroGames-san ga Tousan shi chatta yo\uff5e",
         ["35-2"] = "Boku no Hefeng Bendang Shangshou",
-        
-        // Happy Otaku Pack 13
-        ["44-1"] = "Ying Ying Da Zuo Zhan",
-        
-        // Happy Otaku Pack Vol.16
-        ["57-3"] = "Sore wa mo Lovechu",
-        
-        // Happy Otaku Pack Vol.17
-        ["62-0"] = "【Dongai li Lovely】Lovely",
-        ["62-1"] = "Shinkai no Fune",
-        ["62-3"] = "Numatta！！",
-        
+
+        // Cute Is Everything Vol.7
+        ["37-0"] = "Liu Li Se Qian Zou Qu",
+
         // Phigros
         ["38-1"] = "Yukifuri Merry Christmas",
+
+        // Muse Radio FM102
+        ["39-0"] = "Qu Jian Hai De Ri Zi",
+        ["39-6"] = "Hadaka no Summer",
 
         // Touhou Mugakudan -I-
         ["42-1"] = "Iro wa Nioedo Chirinuru wo",
         ["42-3"] = "Hiiro Gekka Kyoushou no Zetsu",
+
+        // MD Plus Project
+        ["43-3"] = "Night・of・Knights",
+        ["43-10"] = "Catalyst",
+        ["43-18"] = "Monosugoi Kuruttoru Fran-chan ga Monosugoi Uta",
+        ["43-24"] = "Tian Ling Ling Di Ling Ling",
+        ["43-29"] = "Jiu Meng",
+        ["43-36"] = "Mermaid Radio",
+        ["43-44"] = "Mu Se Xiao Shi",
+
+        // Happy Otaku Pack 13
+        ["44-1"] = "Ying Ying Da Zuo Zhan",
 
         // DokiDoki! Valentine!
         ["49-1"] = "Ren'ai Kaihi Izonshi",
@@ -96,6 +90,9 @@ internal static class ModManager
         // Virtual Idol Production
         ["51-0"] = "Jia Mian Ri Ji",
         ["51-4"] = "Danshi in\u2606 virtual land",
+
+        // Muse Radio FM103
+        ["52-2"] = "Ornament janai(Muse Dash Mix)",
 
         // MEGAREX THE FUTURE
         ["54-2"] = "Kongetsu no Osusume Playlist wo Kensakushimasu",
@@ -105,12 +102,24 @@ internal static class ModManager
         ["55-2"] = "Monosugoi Space Shuttle de Koishi ga Monosugoi Uta",
         ["55-3"] = "Kakoi Naki yo wa Ikki no Tsukikage",
 
+        // Happy Otaku Pack Vol.16
+        ["57-3"] = "Sore wa mo Lovechu",
+
         // Nanahira Paradise
         ["58-3"] = "Vocal ni Mucha Sasenna",
 
         // Ola Dash
         ["61-0"] = "MuseDash ga Nanika Chotto Okashi", // ??????????
         ["61-2"] = "Buttoba Supernova",
+
+        // Happy Otaku Pack Vol.17
+        ["62-0"] = "【Dongai li Lovely】Lovely",
+        ["62-1"] = "Shinkai no Fune",
+        ["62-3"] = "Numatta！！",
+
+        // Muse Radio FM104
+        ["63-1"] = "Streamers High of 100 years",
+        ["63-4"] = "Yoru no Machi",
 
         // COSMIC RADIO PEROLIST
         ["64-0"] = "Sutori\uff5ema\uff5eFIRE!?!?",
@@ -144,16 +153,7 @@ internal static class ModManager
         // Legends of Muse Warriors
         ["72-0"] = "P E R O P E R O Xiong\u2730Gui\u2730Luan\u2730Wu (feat.音游部, howsoon)",
         ["72-2"] = "How To Make Otoge\uff5eKyoku!",
-        ["72-6"] = "Teshikani( TESHiKANi )",
-
-        // MD Plus Project
-        ["43-3"] = "Night・of・Knights",
-        ["43-10"] = "Catalyst",
-        ["43-18"] = "Monosugoi Kuruttoru Fran-chan ga Monosugoi Uta",
-        ["43-24"] = "Tian Ling Ling Di Ling Ling",
-        ["43-29"] = "Jiu Meng",
-        ["43-36"] = "Mermaid Radio",
-        ["43-44"] = "Mu Se Xiao Shi"
+        ["72-6"] = "Teshikani( TESHiKANi )"
     };
 
     internal static void AddSearchTags()
