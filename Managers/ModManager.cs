@@ -153,7 +153,10 @@ internal static class ModManager
         // Legends of Muse Warriors
         ["72-0"] = "P E R O P E R O Xiong\u2730Gui\u2730Luan\u2730Wu (feat.音游部, howsoon)",
         ["72-2"] = "How To Make Otoge\uff5eKyoku!",
-        ["72-6"] = "Teshikani( TESHiKANi )"
+        ["72-6"] = "Teshikani( TESHiKANi )",
+
+        // Happy Otaku Pack Vol.19
+        ["73-2"] = "Dance Dance Wanan Wuhui",
     };
 
     internal static void AddSearchTags()
