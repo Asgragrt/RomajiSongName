@@ -21,7 +21,7 @@ internal static class FancyScrollPatch
             if (musicInfo is null)
                 return;
 
-            Logger.Msg(musicInfo.uid);
+            Logger.Msg($"UID: {musicInfo.uid} - Name: {musicInfo.name}");
         });
     }
 }
