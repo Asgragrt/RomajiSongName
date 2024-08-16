@@ -9,6 +9,7 @@ public class Main : MelonMod
     public override void OnInitializeMelon()
     {
         SettingsManager.Load();
+        ModManager.LoadCustomNames();
         LoggerInstance.Msg($"{MelonBuildInfo.ModName} has loaded correctly!");
     }
 }
