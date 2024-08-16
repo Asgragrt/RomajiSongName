@@ -4,11 +4,22 @@ using RomajiSongName.Managers;
 
 namespace RomajiSongName.Patches;
 
-[HarmonyPatch(typeof(MusicTagManager), nameof(MusicTagManager.InitDatas))]
+[HarmonyPatch(typeof(MusicTagManager))]
 internal static class MusicTagPatch
 {
-    internal static void Prefix()
+    [HarmonyPatch(nameof(MusicTagManager.InitDatas))]
+    [HarmonyPostfix]
+    internal static void InitDataPatch()
     {
+        // * Replace locals after initialization
+        ModManager.ReplaceLocalName();
+    }
+
+    [HarmonyPatch(nameof(MusicTagManager.InitDefaultInfo))]
+    [HarmonyPostfix]
+    internal static void InitDefaultInfoPatch()
+    {
+        // * Move to InitDefaultInfo to work with custom albums
         ModManager.AddSearchTags();
     }
 }

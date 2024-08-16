@@ -1,9 +1,10 @@
-// cSpell:disable
+﻿// cSpell:disable
 using System.Text.RegularExpressions;
 using Il2CppAssets.Scripts.Database;
 using Il2CppAssets.Scripts.PeroTools.Commons;
 using Il2CppAssets.Scripts.PeroTools.Managers;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
+using Il2CppPeroPeroGames.GlobalDefines;
 
 namespace RomajiSongName.Managers;
 
@@ -199,6 +200,25 @@ internal static class ModManager
                 config.m_Dictionary.Add(searchTag.uid, searchTag);
                 config.list.Add(searchTag);
             }
+        }
+    }
+
+    internal static void ReplaceLocalName()
+    {
+        var musicTag = GlobalDataBase.dbMusicTag;
+        foreach (var (uid, romanName) in RomajiNames)
+        {
+            var curMusic = musicTag.GetMusicInfoFromAll(uid);
+            if (curMusic is null)
+            {
+                MelonLoader.Melon<Main>.Logger.Msg(
+                    $"Failed to find a chart with the following uid: {uid}"
+                );
+                continue;
+            }
+
+            var localInfo = curMusic.GetLocal(Language.english);
+            localInfo.name = romanName;
         }
     }
 
