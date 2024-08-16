@@ -8,20 +8,17 @@ using static MelonBuildInfo;
 internal static class SettingsManager
 {
     private const string SettingsPath = $"UserData/{ModName}.cfg";
+
     private static MelonPreferences_Entry<bool> _displayMusicUid;
 
     private static MelonPreferences_Entry<bool> _isEnabled;
-    internal static bool DisplayMusicUid
-    {
-        get => _displayMusicUid.Value;
-        set => _displayMusicUid.Value = value;
-    }
 
-    internal static bool IsEnabled
-    {
-        get => _isEnabled.Value;
-        set => _isEnabled.Value = value;
-    }
+    private static MelonPreferences_Entry<bool> _verboseLogging;
+
+    internal static bool DisplayMusicUid => _displayMusicUid.Value;
+
+    internal static bool IsEnabled => _isEnabled.Value;
+    internal static bool VerboseLogging => _verboseLogging.Value;
 
     internal static void Load()
     {
@@ -30,5 +27,6 @@ internal static class SettingsManager
 
         _isEnabled = mainCategory.CreateEntry(nameof(IsEnabled), true);
         _displayMusicUid = mainCategory.CreateEntry(nameof(DisplayMusicUid), false);
+        _verboseLogging = mainCategory.CreateEntry(nameof(VerboseLogging), false);
     }
 }

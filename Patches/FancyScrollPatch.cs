@@ -2,6 +2,7 @@ using HarmonyLib;
 using Il2CppAssets.Scripts.Database;
 using Il2CppAssets.Scripts.UI.Panels;
 using RomajiSongName.Managers;
+using RomajiSongName.Utils;
 
 namespace RomajiSongName.Patches;
 
@@ -20,7 +21,7 @@ internal static class FancyScrollPatch
             if (musicInfo is null)
                 return;
 
-            MelonLoader.Melon<Main>.Logger.Msg(musicInfo.uid);
+            Logger.Msg(musicInfo.uid);
         });
     }
 }

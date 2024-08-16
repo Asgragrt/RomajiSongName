@@ -5,6 +5,7 @@ using Il2CppAssets.Scripts.PeroTools.Commons;
 using Il2CppAssets.Scripts.PeroTools.Managers;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
 using Il2CppPeroPeroGames.GlobalDefines;
+using RomajiSongName.Utils;
 
 namespace RomajiSongName.Managers;
 
@@ -211,9 +212,7 @@ internal static class ModManager
             var curMusic = musicTag.GetMusicInfoFromAll(uid);
             if (curMusic is null)
             {
-                MelonLoader.Melon<Main>.Logger.Msg(
-                    $"Failed to find a chart with the following uid: {uid}"
-                );
+                Logger.Msg($"Failed to find a chart with the following uid: {uid}");
                 continue;
             }
 
