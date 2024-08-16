@@ -11,12 +11,12 @@ internal static class FancyScrollPatch
 {
     internal static void Postfix(PnlStage __instance)
     {
+        if (!SettingsManager.DisplayMusicUid)
+            return;
+
         var musicTag = GlobalDataBase.dbMusicTag;
         __instance.musicFancyScrollView.onItemIndexChange += new Action<int>(i =>
         {
-            if (!SettingsManager.DisplayMusicUid)
-                return;
-
             var musicInfo = musicTag.GetMusicInfoFromShowMusicUids(i);
             if (musicInfo is null)
                 return;

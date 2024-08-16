@@ -11,6 +11,8 @@ internal static class MusicTagPatch
     [HarmonyPostfix]
     internal static void InitDataPatch()
     {
+        if (!SettingsManager.IsEnabled)
+            return;
         // * Replace locals after initialization
         ModManager.ReplaceLocalName();
     }
@@ -19,6 +21,8 @@ internal static class MusicTagPatch
     [HarmonyPostfix]
     internal static void InitDefaultInfoPatch()
     {
+        if (!SettingsManager.IsEnabled)
+            return;
         // * Move to InitDefaultInfo to work with custom albums
         ModManager.AddSearchTags();
     }
