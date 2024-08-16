@@ -205,7 +205,8 @@ internal static class ModManager
     private static List<string> SplitString(string s)
     {
         // Split string by non alphanumerical characters, sanitize from empty or space only strings and return a list
-        return Regex.Split(s.Trim(), @"[^a-zA-Z0-9]")
+        return Regex
+            .Split(s.Trim(), @"[^a-zA-Z0-9]")
             .Select(word => word.Trim('\'').ToLower())
             .Where(word => word.Any())
             .ToList();
