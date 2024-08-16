@@ -7,7 +7,7 @@ namespace RomajiSongName.Patches;
 [HarmonyPatch(typeof(MusicTagManager), nameof(MusicTagManager.InitDatas))]
 internal static class MusicTagPatch
 {
-    internal static void Posftfix()
+    internal static void Prefix()
     {
         ModManager.AddSearchTags();
     }
