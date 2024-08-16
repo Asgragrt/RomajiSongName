@@ -17,6 +17,11 @@ internal static class ModManager
         MelonEnvironment.UserDataDirectory,
         "CustomNames.json"
     );
+    private static readonly Regex SpaceRegex = new(@"\s");
+
+    private static readonly Regex SplitterRegex = new(@"(?=\W)|(?<=\W)");
+
+    private static readonly Regex WordsRegex = new(@"\b\w{2,}\b");
 
     internal static void AddSearchTags()
     {
@@ -24,12 +29,7 @@ internal static class ModManager
 
         foreach (var (uid, romanName) in SongNames.RomajiNames)
         {
-            var splitString = SplitString(romanName);
-            var joinedSpacedString = string.Join(' ', splitString);
-            var joinedTightString = string.Join(null, splitString);
-
-            List<string> tags = [romanName, joinedSpacedString, joinedTightString];
-            tags.AddRange(splitString);
+            var tags = CreateTags(romanName);
 
             if (config.m_Dictionary.TryGetValue(uid, out var tagInfo))
             {
@@ -127,13 +127,24 @@ internal static class ModManager
         }
     }
 
-    private static List<string> SplitString(string s)
+    private static List<string> CreateTags(string s)
     {
-        // Split string by non alphanumerical characters, sanitize from empty or space only strings and return a list
-        return Regex
-            .Split(s.Trim(), @"[^a-zA-Z0-9]")
-            .Select(word => word.Trim('\'').ToLower())
-            .Where(word => word.Any())
-            .ToList();
+        static List<string> GetJoined(IEnumerable<string> xs) =>
+            [string.Join(' ', xs), string.Join(null, xs)];
+
+        var words = WordsRegex.Matches(s).Select(match => match.Value.ToUpperInvariant());
+        var symbols = SplitterRegex
+            .Split(s)
+            .Select(word => SpaceRegex.Replace(word, "").ToUpperInvariant())
+            .Where(word => word.Any());
+
+        List<string> tags =
+        [
+            .. words,
+            .. GetJoined(words),
+            .. symbols.Where(s => s.Length > 1),
+            .. GetJoined(symbols)
+        ];
+        return [.. tags.ToHashSet()];
     }
 }
