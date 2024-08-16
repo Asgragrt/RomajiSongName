@@ -185,7 +185,7 @@ internal static class ModManager
             {
                 var oldTags = new List<string>(tagInfo.tag);
                 oldTags.AddRange(tags);
-                tagInfo.tag = new Il2CppStringArray(oldTags.ToArray());
+                tagInfo.tag = new Il2CppStringArray([.. oldTags]);
             }
             else
             {
@@ -193,7 +193,7 @@ internal static class ModManager
                 {
                     uid = key,
                     listIndex = config.count,
-                    tag = new Il2CppStringArray(tags.ToArray())
+                    tag = new Il2CppStringArray([.. tags])
                 };
 
                 config.m_Dictionary.Add(searchTag.uid, searchTag);
