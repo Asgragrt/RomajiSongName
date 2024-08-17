@@ -6,5 +6,5 @@ internal static class MelonBuildInfo
 
     internal const string ModName = "RomajiSongName";
 
-    internal const string ModVersion = "1.2.0";
+    internal const string ModVersion = "1.2.1";
 }
