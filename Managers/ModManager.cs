@@ -132,10 +132,10 @@ internal static class ModManager
         static List<string> GetJoined(IEnumerable<string> xs) =>
             [string.Join(' ', xs), string.Join(null, xs)];
 
-        var words = WordsRegex.Matches(s).Select(match => match.Value.ToUpperInvariant());
+        var words = WordsRegex.Matches(s).Select(match => match.Value.ToLowerInvariant());
         var symbols = SplitterRegex
             .Split(s)
-            .Select(word => SpaceRegex.Replace(word, "").ToUpperInvariant())
+            .Select(word => SpaceRegex.Replace(word, "").ToLowerInvariant())
             .Where(word => word.Any());
 
         List<string> tags =
